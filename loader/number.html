@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./number.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    <section>
+        <h2>Welcomback</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus ad recusandae? Cupiditate, tenetur consequatur laboriosam iste ut soluta eveniet officia nemo ab dignissimos eligendi incidunt quod? Nihil soluta laborum dolorem. Beatae minus quas libero ipsa dicta. Libero voluptates autem doloremque ad ipsam ullam odio nemo alias maxime laborum, eaque quis sit eligendi a expedita iste placeat est? Commodi, dolore! Atque possimus earum quod eveniet fugit odit sequi quia mollitia, iusto enim impedit tempore corporis, pariatur quas soluta reprehenderit quisquam incidunt? Accusamus maxime nulla quis repellat ea non rerum eum fugiat quisquam doloremque qui nam blanditiis ducimus, quaerat facere sint excepturi. Iste perferendis blanditiis sed ad atque fuga accusantium eum id. Consequatur repellendus maiores tempora ab rerum modi ratione facere repudiandae nobis quasi! Eligendi nemo sequi ipsa, dolorum incidunt modi quas facere recusandae tenetur, laborum unde numquam quasi eum ea minima hic! Maiores officia, architecto ab voluptas quaerat, neque, doloremque ipsa eligendi tempora quia fuga aut incidunt omnis? Asperiores in at dolorum sed? Sed, ipsa! Ab iure culpa nihil eaque obcaecati quae, sequi, maxime aliquam minima labore atque error quo reprehenderit doloribus harum inventore, expedita quas saepe porro exercitationem. Qui earum dignissimos dolores facilis natus eius quas tenetur accusamus? Eligendi!</p>
+    </section>
+    <script>
+        function counter(){
+            var counter = document.querySelector('.counter');
+            var preloader = document.querySelector('.preloader');
+            var count = setInterval(function(){
+                var c = parseInt(counter.innerHTML);
+                counter.innerHTML = ++c;
+                if(c == 100){
+                    clearInterval(count);
+                    counter.classList.add('hide');
+                    preloader.classList.add('active');
+                }
+            })
+        }
+        counter();
+    </script>
+</body>
+</html>

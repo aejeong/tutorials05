@@ -1,0 +1,18 @@
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    overflow:hidden;
+    background-attachment: fixed;
+    background:#eee;
+} 
+
+#cursor{
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:url(../images/beach.jpg);
+    border-radius: 50%;
+    background-attachment: fixed;
+    /* transform: translate(-50%,-50%); */
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./slideshow.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column active">
+            <div class="bg">
+                <img src="../images/beach.jpg" alt="">
+            </div>
+        </div>
+        <div class="column">
+            <div class="bg">
+                <img src="../images/red.jpg" alt="">
+            </div>
+        </div>
+        <div class="column">
+            <div class="bg">
+                <img src="../images/sea.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        var columns = document.querySelectorAll('.column');
+        var activatedColumn =document.querySelector('.column.active');
+        columns.forEach(function(column){
+            column.addEventListener('mouseover',function(){
+                if(!column.classList.contains('active')){
+                    column.classList.add('active')
+                }else{
+                column.classList.remove('active');
+                }
+            })
+        })
+    </script>
+</body>
+</html>
